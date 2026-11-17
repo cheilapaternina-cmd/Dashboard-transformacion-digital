@@ -349,33 +349,6 @@ st.caption(
     "Límites de riesgo: productividad 70 %, entregas 75 %, satisfacción 75/100, automatización 35 %."
 )
 
-# ---------------------------------------------------------------------------
-# Hoja de ruta
-# ---------------------------------------------------------------------------
-st.subheader("🗺️ Hoja de ruta de la transformación digital (18 meses)")
-fig_r = go.Figure()
-paleta = [AZUL, "#7C3AED", "#0891B2", GRIS, VERDE]
-for (_, r), color in zip(estrategias.iloc[::-1].iterrows(), paleta[::-1]):
-    fig_r.add_bar(
-        y=[r["Estrategia"]],
-        x=[r["Fin"] - r["Inicio"] + 1],
-        base=[r["Inicio"] - 1],
-        orientation="h",
-        marker_color=color,
-        showlegend=False,
-        text=f"Mes {r['Inicio']}–{r['Fin']}",
-        textposition="inside",
-        hovertemplate=f"{r['Estrategia']}<br>Mes {r['Inicio']}–{r['Fin']}"
-                      f"<br>Mejora: {r['Indicadores que mejora']}<extra></extra>",
-    )
-fig_r.update_layout(
-    xaxis=dict(range=[0, 18], dtick=3, title="Mes"),
-    height=300,
-    margin=dict(l=10, r=10, t=10, b=10),
-)
-st.plotly_chart(fig_r, width="stretch")
-
 st.divider()
 st.caption(
     "Estudio de caso – Transformación digital · Dashboard desarrollado en Python (Streamlit + Plotly)."
-)
