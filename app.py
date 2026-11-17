@@ -351,5 +351,5 @@ st.caption(
 
 st.divider()
 st.caption(
-    "Estudio de caso – Transformación digital · Dashboard desarrollado en Python (Streamlit + Plotly)."
+    "Estudio de caso – Transformación digital·)."
 )
