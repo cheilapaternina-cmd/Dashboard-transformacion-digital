@@ -229,4 +229,4 @@ st.download_button("⬇️ Descargar tabla (CSV)", tabla.to_csv(index=False).enc
                    file_name="indicadores_kpi.csv", mime="text/csv")
 
 st.divider()
-st.caption("Estudio de caso – Transformación digital · Dashboard desarrollado en Python (Streamlit + Plotly).")
+st.caption("Estudio de caso – Transformación digital.")
