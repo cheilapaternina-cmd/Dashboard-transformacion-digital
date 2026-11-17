@@ -39,7 +39,7 @@ kpi = pd.DataFrame(
         ],
         "Unidad": ["%", "%", "/100", "%"],
         "Metalmecánicas": [68, 72, 70, 25],
-        "Meta": [80, 88, 85, 50],
+        "Meta": [85, 95, 90, 70],
         "SmartFlow": [92, 97, 94, 85],
         # Límites del semáforo: verde >= meta; amarillo >= limite_amarillo; rojo < limite_amarillo
         "Límite amarillo": [70, 75, 75, 35],
@@ -62,8 +62,8 @@ tiempos = pd.DataFrame(
 )
 
 # Indicador cualitativo
-uso_datos = {"Metalmecánicas": "Bajo", "Meta": "Medio-alto", "SmartFlow": "Alto"}
-NIVELES = {"Bajo": 1, "Medio": 2, "Medio-alto": 2.5, "Alto": 3}
+uso_datos = {"Metalmecánicas": "Bajo", "Meta": "Alto", "SmartFlow": "Alto"}
+NIVELES = {"Bajo": 1, "Medio": 2, "Alto": 2.5, "Alto": 3}
 
 # Estrategias de transformación (hoja de ruta)
 estrategias = pd.DataFrame(
@@ -121,7 +121,7 @@ with st.sidebar:
     st.divider()
     st.caption(
         "Fuente: indicadores del estudio de caso (Caso 1 y Caso 2). "
-        "Metas propuestas para un horizonte de 12–18 meses."
+        "Meta propuesta."
     )
 
 # Valores simulados según el avance del plan
@@ -212,7 +212,7 @@ with izq:
             y=orden["Indicador"],
             x=orden["Meta"],
             mode="markers",
-            name="Meta 12–18 meses",
+            name="Meta Propuesta",
             marker=dict(symbol="line-ns", size=28, line=dict(width=4, color=GRIS)),
             hovertemplate="Meta: %{x}<extra></extra>",
         )
