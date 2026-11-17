@@ -53,11 +53,7 @@ with st.sidebar:
     empresa = st.radio("Empresa a monitorear", [EMP1, EMP2], index=0)
     otra = EMP2 if empresa == EMP1 else EMP1
     mostrar_otra = st.checkbox(f"Comparar con {otra}", value=True)
-    st.divider()
-    st.caption(
-        "**Fuente:** tablas «Indicadores actuales de la empresa» del Caso 1 y del Caso 2 del parcial. "
-        "Para graficar: 5 minutos = 0,08 horas y tiempo real = 0 días."
-    )
+    
 
 st.title("📊 Dashboard de indicadores clave de desempeño")
 st.markdown(f"Transformación digital · **{EMP1} S.A.S.** vs. **{EMP2} S.A.S.**")
