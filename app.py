@@ -351,5 +351,5 @@ st.caption(
 
 st.divider()
 st.caption(
-    "Estudio de caso – Transformación digital)."
+    "Estudio de caso – Transformación digital."
 )
